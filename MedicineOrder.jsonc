@@ -1,0 +1,58 @@
+{
+  "name": "MedicineOrder",
+  "type": "object",
+  "properties": {
+    "patient_email": {
+      "type": "string"
+    },
+    "medication_id": {
+      "type": "string"
+    },
+    "medication_name": {
+      "type": "string"
+    },
+    "pharmacy": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "requested",
+        "confirmed",
+        "packed",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "requested"
+    },
+    "requested_at": {
+      "type": "string"
+    },
+    "tracking_no": {
+      "type": "string"
+    },
+    "prescription_uri": {
+      "type": "string"
+    },
+    "requested_by": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patient_email",
+    "medication_name"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

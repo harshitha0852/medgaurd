@@ -1,0 +1,50 @@
+{
+  "name": "HealthMetric",
+  "type": "object",
+  "properties": {
+    "patient_email": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "water",
+        "weight",
+        "bp",
+        "glucose",
+        "steps",
+        "sleep",
+        "heart_rate",
+        "meal",
+        "activity"
+      ],
+      "default": "water"
+    },
+    "value": {
+      "type": "number"
+    },
+    "value2": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "recorded_date": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patient_email",
+    "type",
+    "recorded_date"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

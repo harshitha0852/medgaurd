@@ -1,0 +1,58 @@
+{
+  "name": "Account",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password_hash": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "patient",
+        "caregiver",
+        "professional"
+      ],
+      "default": "patient"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "hospital": {
+      "type": "string"
+    },
+    "license_no": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    },
+    "consent_accepted": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "role"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}
