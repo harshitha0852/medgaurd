@@ -1,0 +1,64 @@
+{
+  "name": "InteractionAlert",
+  "type": "object",
+  "properties": {
+    "patient_email": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "interaction",
+        "duplicate",
+        "allergy",
+        "contraindication"
+      ],
+      "default": "interaction"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low"
+      ],
+      "default": "moderate"
+    },
+    "title": {
+      "type": "string"
+    },
+    "medicines": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "acknowledged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "patient_email",
+    "title",
+    "severity"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

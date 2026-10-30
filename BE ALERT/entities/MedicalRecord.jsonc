@@ -1,0 +1,68 @@
+{
+  "name": "MedicalRecord",
+  "type": "object",
+  "properties": {
+    "patient_email": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "prescription",
+        "lab_report",
+        "consultation",
+        "imaging",
+        "discharge",
+        "other"
+      ],
+      "default": "other"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "hospital": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "record_date": {
+      "type": "string"
+    },
+    "file_uri": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "shared_with": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uploaded_by": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "patient_email",
+    "title"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}
